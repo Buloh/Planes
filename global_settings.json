@@ -115,5 +115,8 @@
                 }
             }
         }
+    },
+    "locked_plans": {
+        "2025_Směna 1_brezen": true
     }
 }

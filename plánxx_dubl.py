@@ -1,4 +1,3 @@
-
 # ----- Importy a globální konstanty
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, simpledialog
@@ -15,11 +14,14 @@ import time
 import getpass
 
 # ----- Verze programu
-__version__="1.0.0"
+__version__="1.1.0"
+
+# -----1.0.0 Základní funkčnost programu Náhled, Editace, Role, Přístupy, Logy, Základní nastavení, Vytvoření databáze, Uložení základního nastavení, Import dat z Ecxelu
+# ----- 1.1.0 Doplnění o funkci Zamknutí Plánu a Odeknutí plánu s ukádáním do Globálního nastavení
 
 # Přidejte funkci show_verze() na globální úroveň
 def show_verze():
-    info_text = "Verze: " + __version__ + "\n(C) 2025 Holub Stanislav"
+    info_text = "Správa Plánu Služeb a Dovolených \nVerze: " + __version__ + "\n(C) 2025 Holub Stanislav"
     messagebox.showinfo("O aplikaci", info_text)
 
 # ----- Mapa barev: převod českých názvů na anglické
@@ -44,10 +46,17 @@ def show_help():
     help_win.geometry("700x550")
     
     help_text = (
-        "Návrh Plánu Služeb a Dovolených verze: "+__version__+"\n\n"
-        "Tento program slouží k návrhu plánu služeb, dovolených a vypuštěných směna. Aplikace nabízí různé funkce "
+        "Správa Plánu Služeb a Dovolených verze: "+__version__+"\n\n"
+        "Tento program slouží k návrhu plánu služeb, dovolených a vypuštěných směna. Aplikace nabízí různé funkcen\n"
         "pro zadávání, editaci a správu plánů, a to prostřednictvím přehledného grafického rozhraní.\n\n"
         
+        "OMEZENÍ ODPOVĚDNOSTI A UŽÍVÁNÍ NA VLASTNÍ NEBEZPEČÍ:\n\n"
+        "Používání této aplikace probíhá na vlastní odpovědnost uživatele. Autor, vývojáři a distributoři tohoto\n" 
+        "softwaru neposkytují žádné záruky, a to ani v rozsahu výslovném, ani předpokládaném, včetně záruk obchodovatelnosti\n"
+        "či vhodnosti pro konkrétní účely. V žádném případě nebudou odpovědní za jakékoliv přímé, nepřímé, náhodné či\n"
+        "následné škody, ztrátu dat nebo jiné nepříznivé důsledky vyplývající z používání aplikace. Uživatelé jsou\n"
+        "povinni ověřit správnost a úplnost všech dat před jejich použitím.\n\n"
+
         "RYCHLÁ NÁPOVĚDA\n\n"
         "1. Výběr záložky:\n"
         "- přejdi na záložku ZAMĚSTANEC pro plán na celý rok, nebo na záložku Směny pro plán na zvolený měsíc.\n\n"
@@ -99,11 +108,13 @@ def show_help():
         
         "   Admin:\n"
         "      - Má plná práva k editaci, Správě databáze a Konfiguraci aplikace.\n"
-        "      - Může měnit Globální nastavení a zadávat nové údaje, které ovlivňují všechny plány.\n\n"
+        "      - Může měnit Globální nastavení a zadávat nové údaje, které ovlivňují všechny plány.\n"
+        "      - Může uzamknout plán služeb, po uazmčení nejde plán editovat.\n\n"
         
         "   Superadmin:\n"
         "      - Má nejvyšší oprávnění v aplikaci.\n"
-        "      - Může provádět zásahy do celého systému, včetně úprav Globálních nastavení, Správy logů a Databáze.\n\n"
+        "      - Může provádět zásahy do celého systému, včetně úprav Globálních nastavení, Správy logů a Databáze.\n"
+        "      - Může uzamknout plán služeb, po uazmčení nejde plán editovat.\n\n"
         
         "5. Uživatelská podpora:\n"
         "   - Pro další informace nebo řešení problémů kontaktujte správce programu. Pokud zjistí chybu nahlašte ji správci.\n\n"
@@ -128,6 +139,19 @@ def show_help():
         "   - r II.: Počet ranních směn ve I. pololetí.\n"
         "     (r naplánovat v II. pololetí / r naplánováno II. pololetí )\n\n"
         "   - zkratky v programu se shodují s tištěnou verzí Plánu služeb\n\n"
+
+        "Licence pro otevřený software\n\n"
+
+        "Copyright (c) [2025] [Holub Stanislav]\n"
+        "Tento software je poskytován pod licencí pro otevřený software, dále jen „Licence“. Uživatelé této licence mají\n" 
+        "právo používat, kopírovat, upravovat, spojovat, publikovat, distribuovat, sublicencovat a/nebo prodávat kopie softwaru,\n"
+        "za následujících podmínek:\n\n"
+        "1. Tento software je poskytován „jak je“, bez jakýchkoli záruk, vyjádřených nebo implicitních, včetně, ale neomezující se\n"
+        "na implicitní záruky obchodovatelnosti, vhodnosti pro určitý účel a nezánětým právům. Autoři nebo vlastníci autorských práv\n" 
+        "nejsou zodpovědní za jakékoli nároky, škody nebo jinou odpovědnost, ať už ve smlouvě, nebo z jiného důvodu, plynoucí z nebo\n" 
+        "v souvislosti se softwarem nebo jeho používáním.\n\n"
+        "2. Jména „[vlastník autorských práv]“ nemohou být použity k podpoře nebo propagaci výrobků odvozených z tohoto softwaru\n" 
+        "bez předchozího písemného povolení.\n\n"
     )
     
     text_widget = tk.Text(help_win, wrap="word", font=("TkDefaultFont", 10))
@@ -136,8 +160,6 @@ def show_help():
     text_widget.pack(expand=True, fill="both", padx=10, pady=10)
     
     tk.Button(help_win, text="Zavřít", command=help_win.destroy).pack(pady=5)
-
-
 
 # Název konfiguračního souboru
 CONFIG_FILE = "global_settings.json"
@@ -191,13 +213,16 @@ def load_config():
                     ("Velitel směny 4", encode_password("heslo4"), "velitel"),
                     ("Velitel směny 5", encode_password("heslo5"), "velitel"),
                     ("Velitel směny 6", encode_password("heslo6"), "velitel"),
-                ]
+                ],
+                "locked_plans": {}  # MOD: Výchozí prázdný slovník pro zámky plánů
             }
             save_config(config)
         # Zajištění, že všechny klíče existují
         for key in ["40", "37.5", "37.75", "access"]:
             if key not in config:
                 config[key] = [] if key != "access" else []
+        if "locked_plans" not in config:
+            config["locked_plans"] = {}  # MOD: Ujistíme se, že existuje i klíč pro zámky
         return config
     except Exception as e:
         logging.error(f"Chyba při načítání konfiguračního souboru: {e}")
@@ -212,6 +237,10 @@ current_user_name = "uživatel"      # Jméno aktuálně přihlášeného uživa
 current_user_shift = None           # Pouze pro filtrování, nikoli pro oprávnění
 current_record_id = None            # Uchovává id aktuálně zobrazeného plánu
 month_frames = {}                   # Slovník pro uložení odkazů na jednotlivé měsíční rámce
+
+# Deklarace globálních proměnných pro tlačítka zámku plánu
+btn_lock_plan = None
+btn_unlock_plan = None
 
 # ----- Síťové a logovací funkce
 def get_ip_address():
@@ -421,6 +450,50 @@ def calculate_month_summary(day_plan_list, uvazek):
                 break
     return total_hours, summary
 
+# ----- NOVÉ: Funkce pro zamykání a odemykání plánu
+def lock_plan():
+    """
+    Zamkne plán pro zadaný rok, měsíc a směnu.
+    """
+    rok = combo_rok_smena.get().strip()
+    mesic_display = combo_mesic_smena.get().strip()
+    smena_val = combo_smena_smena.get().strip()
+    if not (rok and mesic_display and smena_val):
+        messagebox.showwarning("Upozornění", "Vyberte prosím rok, měsíc a směnu pro zamknutí.")
+        return
+    mesic_map = {"Leden": "leden", "Únor": "unor", "Březen": "brezen", "Duben": "duben", "Květen": "kveten",
+                 "Červen": "cerven", "Červenec": "cervenec", "Srpen": "srpen", "Září": "zari",
+                 "Říjen": "rijen", "Listopad": "listopad", "Prosinec": "prosinec"}
+    internal_mesic = mesic_map.get(mesic_display, mesic_display.lower())
+    key = f"{rok}_{smena_val}_{internal_mesic}"
+    global_settings["locked_plans"][key] = True
+    save_config(global_settings)
+    messagebox.showinfo("Zámek", f"Plán {key} byl zamknut.")
+    zobraz_plan_smeny()  # Obnoví zobrazení plánu
+
+def unlock_plan():
+    """
+    Odemkne plán pro zadaný rok, měsíc a směnu.
+    """
+    rok = combo_rok_smena.get().strip()
+    mesic_display = combo_mesic_smena.get().strip()
+    smena_val = combo_smena_smena.get().strip()
+    if not (rok and mesic_display and smena_val):
+        messagebox.showwarning("Upozornění", "Vyberte prosím rok, měsíc a směnu pro odemknutí.")
+        return
+    mesic_map = {"Leden": "leden", "Únor": "unor", "Březen": "brezen", "Duben": "duben", "Květen": "kveten",
+                 "Červen": "cerven", "Červenec": "cervenec", "Srpen": "srpen", "Září": "zari",
+                 "Říjen": "rijen", "Listopad": "listopad", "Prosinec": "prosinec"}
+    internal_mesic = mesic_map.get(mesic_display, mesic_display.lower())
+    key = f"{rok}_{smena_val}_{internal_mesic}"
+    if key in global_settings.get("locked_plans", {}):
+        del global_settings["locked_plans"][key]
+        save_config(global_settings)
+        messagebox.showinfo("Zámek", f"Plán {key} byl odemknut.")
+    else:
+        messagebox.showinfo("Zámek", "Plán není zamknut.")
+    zobraz_plan_smeny()  # Obnoví zobrazení plánu
+
 # ----- Funkce pro zobrazení dialogu s výběrem směny
 def ask_shift(allowed_shifts, current_value):
     """
@@ -449,11 +522,12 @@ def ask_shift(allowed_shifts, current_value):
     dialog.wait_window()
     return result["value"]
 
-# ----- Funkce pro vykreslení měsíčního plánu
-def render_month_grid(parent, year, month_num, plan_json, month_label, holidays, uvazek, editable=False, highlight=False):
+# ----- Upravená funkce pro vykreslení měsíčního plánu s kontrolou zámku
+def render_month_grid(parent, year, month_num, plan_json, month_label, holidays, uvazek, smena, editable=False, highlight=False):
     """
     Vykreslí mřížku měsíčního plánu.
     Zahrnuje záhlaví s dny v týdnu, čísla dnů a hodnoty plánu.
+    Přidána kontrola, zda je plán zamknutý.
     """
     try:
         if highlight:
@@ -467,6 +541,20 @@ def render_month_grid(parent, year, month_num, plan_json, month_label, holidays,
         except Exception:
             day_plan_list = [""] * 32
         frame.day_plan_list = day_plan_list
+
+        # MOD: Kontrola, zda je plán zamknutý
+        mesic_map = {"Leden": "leden", "Únor": "unor", "Březen": "brezen", "Duben": "duben", "Květen": "kveten",
+                     "Červen": "cerven", "Červenec": "cervenec", "Srpen": "srpen", "Září": "zari",
+                     "Říjen": "rijen", "Listopad": "listopad", "Prosinec": "prosinec"}
+        internal_month = mesic_map.get(month_label, month_label.lower())
+        key = f"{year}_{smena}_{internal_month}"
+        if global_settings.get("locked_plans", {}).get(key, False):
+            frame.is_locked = True
+            tk.Label(frame, text="Plán je zamknut 🔒", font=("TkDefaultFont", 10, "bold"), fg="red")\
+              .grid(row=4, column=0, columnspan=num_days, pady=5)
+        else:
+            frame.is_locked = False
+
         weekdays = ["Po", "Út", "St", "Čt", "Pá", "So", "Ne"]
 
         # ----- Vykreslení záhlaví s dny v týdnu
@@ -517,8 +605,9 @@ def render_month_grid(parent, year, month_num, plan_json, month_label, holidays,
                         break
             if editable:
                 widget = tk.Button(frame, text=plan_value, width=4, bg=bg)
-                widget.config(command=lambda w=widget, idx=day, dpl=frame.day_plan_list, uvazek=uvazek:
-                              edit_cell(w, idx, dpl, uvazek))
+                # MOD: předání informace o zámku do funkce editace buňky
+                widget.config(command=lambda w=widget, idx=day, dpl=frame.day_plan_list, uvazek=uvazek, locked=frame.is_locked:
+                              edit_cell(w, idx, dpl, uvazek, locked))
             else:
                 widget = tk.Label(frame, text=plan_value, borderwidth=1, relief="solid", width=4, bg=bg)
             widget.grid(row=2, column=day-1, padx=1, pady=1)
@@ -531,11 +620,14 @@ def render_month_grid(parent, year, month_num, plan_json, month_label, holidays,
         logging.error(f"Chyba při renderování plánu pro {month_label}: {e}")
         messagebox.showerror("Chyba", f"Chyba při renderování plánu: {e}")
 
-# ----- Funkce pro úpravu buňky (plán směny)
-def edit_cell(button, day_index, day_plan_list, uvazek):
+# ----- Upravená funkce pro úpravu buňky (plán směny)
+def edit_cell(button, day_index, day_plan_list, uvazek, locked=False):
     """
     Umožňuje úpravu hodnoty buňky, pokud má uživatel dostatečná oprávnění.
     """
+    if locked:
+        messagebox.showwarning("Upozornění", "Plán je zamknut 🔒. Úpravy nejsou povoleny.")
+        return
     old_value = button["text"].strip()  # Definice původní hodnoty
     if current_user_role in ["admin", "superadmin"]:
         pass  # Admin má plná práva
@@ -662,7 +754,6 @@ def populate_employee_and_year():
             employee_combobox['values'] = [row["jmeno_prijmeni"] for row in cursor.fetchall()]
             cursor.execute("SELECT DISTINCT roky FROM plans")
             roky = [row["roky"] for row in cursor.fetchall()]
-            year_combobox['values'] = roky
             current_year_str = str(datetime.now().year)
             if current_year_str in roky:
                 year_combobox.set(current_year_str)
@@ -763,12 +854,27 @@ def apply_access_control():
                     notebook.tab(i, state="hidden")
         for i in range(plans_notebook.index("end")):
             plans_notebook.tab(i, state="normal")
-        if role == "superadmin":
-            btn_data.grid()
-            btn_delete_year.grid()
+        if role in ["admin", "superadmin"]:
+            # Zobrazí tlačítka, pokud jsou spravována metodou pack, nastavíme pack() znovu
+            btn_lock_plan.pack(side=tk.LEFT, padx=5)
+            btn_unlock_plan.pack(side=tk.LEFT, padx=5)
         else:
-            btn_data.grid_remove()
-            btn_delete_year.grid_remove()
+            # Skryjeme tlačítka pomocí pack_forget()
+            btn_lock_plan.pack_forget()
+            btn_unlock_plan.pack_forget()
+    except Exception as e:
+        logging.error(f"Chyba při nastavování přístupových práv: {e}")
+
+        # MOD: Aktualizace tlačítek pro zámek plánu v záložce Směna
+        try:
+            if current_user_role == "superadmin":
+                btn_lock_plan.grid()  # zobrazí tlačítka
+                btn_unlock_plan.grid()
+            else:
+                btn_lock_plan.grid_remove()
+                btn_unlock_plan.grid_remove()
+        except Exception as e:
+            logging.error(f"Chyba při aktualizaci tlačítek pro zámek: {e}")
     except Exception as e:
         logging.error(f"Chyba při nastavování přístupových práv: {e}")
 
@@ -777,7 +883,7 @@ def open_fond_window():
     fond_window = tk.Toplevel(root)
     fond_window.title("Fond hodin")
     fond_window.geometry("330x280")  # Můžete upravit velikost dle potřeby
-# --- Výběr roku a směny ---
+# --- Výběr roku a směny ---  
     tk.Label(fond_window, text="Rok:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
     years = [str(y) for y in range(datetime.now().year - 5, datetime.now().year + 6)]
     year_combo = ttk.Combobox(fond_window, values=years, state="readonly", width=10)
@@ -966,9 +1072,9 @@ def open_settings_window():
             }
             if "year_settings" not in global_settings:
                 global_settings["year_settings"] = {}
-                if rok not in global_settings["year_settings"]:
-                    global_settings["year_settings"][rok] = {}
-                    global_settings["year_settings"][rok][smena] = {
+            if rok not in global_settings["year_settings"]:
+                global_settings["year_settings"][rok] = {}
+            global_settings["year_settings"][rok][smena] = {
                         "pololeti1": {
                         "vypustena": data["vypustena1"],
                         "ranni": data["ranni1"]
@@ -1397,7 +1503,7 @@ def show_employee_plan():
                     ranni1_value = global_settings["year_settings"][year_str][shift_name].get("pololeti1", {}).get("ranni", 0)
                     ranni2_value = global_settings["year_settings"][year_str][shift_name].get("pololeti2", {}).get("ranni", 0)
         
-        # Vytvoření kompozitních řetězců pro sloupce
+         # Vytvoření kompozitních řetězců pro sloupce
         klouz1_display = f"{klouz1_value}/{half1_dash_count}"
         klouz2_display = f"{klouz2_value}/{half2_dash_count}"
         ranni1_display = f"{ranni1_value}/{half1_r_count}"
@@ -1523,7 +1629,7 @@ def show_employee_plan():
         current_record_id = record["id"]
         for key, label, month_num in months_info:
             month_frames[key] = render_month_grid(plan_display_frame, selected_year_int, month_num,
-                                                    record[key], label, holidays, record["uvazek"],
+                                                    record[key], label, holidays, record["uvazek"], record["smena"],
                                                     editable=True, highlight=False)
         
         half1_hours = 0
@@ -1715,11 +1821,12 @@ def zobraz_plan_smeny():
         emp_frame = tk.LabelFrame(display_frame, text=header_text, font=("TkDefaultFont", 10, "bold"))
         emp_frame.pack(fill=tk.X, padx=10, pady=5)
         plan_json = plan[col_name]
-        render_month_grid(emp_frame, rok_int, month_num, plan_json, mesic, holidays, plan["uvazek"], editable=False, highlight=False)
+        # MOD: předání směny (plan["smena"]) do renderování
+        render_month_grid(emp_frame, rok_int, month_num, plan_json, mesic, holidays, plan["uvazek"], plan["smena"], editable=False, highlight=False)
 
 # ----- Hlavní část GUI a konfigurace oken
 root = tk.Tk()
-root.title("Správa plánu služeb")
+root.title("Správa Plánu Služeb a Dovolených")
 root.geometry("1370x900+0+0")
 
 # ----- Vytvoření hlavního menu a přidání položky Nápověda a O Alikaci
@@ -1784,9 +1891,14 @@ combo_smena_smena = ttk.Combobox(filter_smena_frame, state="readonly", width=10)
 combo_smena_smena['values'] = ["", "Směna 1", "Směna 2", "Směna 3", "Směna 4", "Směna 5", "Směna 6"]
 combo_smena_smena.set("")
 combo_smena_smena.pack(side=tk.LEFT, padx=5)
-btn_zobraz_plan_smeny_smena = ttk.Button(filter_smena_frame, text="Zobraz plán Směny")
+btn_zobraz_plan_smeny_smena = ttk.Button(filter_smena_frame, text="Zobraz plán Směny", command=zobraz_plan_smeny)
 btn_zobraz_plan_smeny_smena.pack(side=tk.LEFT, padx=5)
-btn_zobraz_plan_smeny_smena.config(command=zobraz_plan_smeny)
+
+# MOD: Přidání tlačítek Zamknout a Odemknout plán – ty budou viditelné pouze pro superadmina
+btn_lock_plan = ttk.Button(filter_smena_frame, text="Zamknout Plán", command=lock_plan)
+btn_lock_plan.pack(side=tk.LEFT, padx=5)
+btn_unlock_plan = ttk.Button(filter_smena_frame, text="Odemknout Plán", command=unlock_plan)
+btn_unlock_plan.pack(side=tk.LEFT, padx=5)
 
 smena_display_frame = tk.Frame(tab_smena)
 smena_display_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=5)
@@ -1840,11 +1952,8 @@ btn_data.grid(row=0, column=3, padx=5)
 # Přidání tlačítka "Fond" za tlačítkem "Data":
 fond_button = ttk.Button(button_frame, text="Fond", command=open_fond_window)
 fond_button.grid(row=0, column=4, padx=5)
-
 btn_delete_year = ttk.Button(button_frame, text="Smazat plány pro rok", command=delete_plans_by_year)
 btn_delete_year.grid(row=0, column=5, padx=5)
-
-
 
 notebook.bind("<<NotebookTabChanged>>", lambda event: refresh_treeview() if event.widget.tab(event.widget.index("current"), "text") == "Nastavení" else None)
 
@@ -1864,7 +1973,6 @@ shift_filter_combobox.pack(side=tk.LEFT, padx=5)
 shift_filter_combobox.bind("<<ComboboxSelected>>", lambda event: update_employee_list())
 show_plan_button = ttk.Button(employee_frame, text="Zobrazit plán", command=show_employee_plan)
 show_plan_button.pack(side=tk.LEFT, padx=5)
-# Tlačítko "Informace" bylo zrušeno
 
 employee_plan_frame = tk.Frame(tab_zamestnanec)
 employee_plan_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
