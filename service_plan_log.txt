@@ -216,3 +216,4 @@
 05.03.2025 10:54:59 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 16, zmìna z 'D' na 'Dov' - Role: superadmin - IP: 192.168.68.57
 05.03.2025 10:56:04 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 16, zmìna z 'Dov' na 'D' - Role: superadmin - IP: 192.168.68.57
 05.03.2025 10:56:21 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 21, zmìna z 'Dov' na 'N' - Role: superadmin - IP: 192.168.68.57
+05.03.2025 16:38:42 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
