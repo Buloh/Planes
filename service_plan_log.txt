@@ -219,3 +219,22 @@
 05.03.2025 16:38:42 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
 05.03.2025 17:56:19 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
 05.03.2025 17:56:49 - Pøihlášení jako Velitel smìny 1 (velitel) - Role: velitel - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:03:19 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:04:40 - Pøihlášení jako Velitel smìny 1 (velitel) - Role: velitel - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:04:58 - Uživatel Velitel smìny 1 (velitel) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 11, zmìna z 'D' na 'Dov' - Role: velitel - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:00 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:08 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:18 - Chyba pøi ukládání zmìn v editaci záznamu: no such column: jmeno_prijmen
+05.03.2025 20:53:42 - Stisknuto tlaèítko 'Smazat' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:43 - Záznam s ID 5 byl smazán z databáze - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:46 - Stisknuto tlaèítko 'Nový' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:50 - Data byla úspìšnì uložena do databáze - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:53:56 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:54:04 - Chyba pøi ukládání zmìn v editaci záznamu: no such column: jmeno_prijmen
+05.03.2025 20:56:43 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:56:50 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:57:02 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:59:02 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:59:16 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 20:59:21 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa
+05.03.2025 21:05:17 - Stisknuto tlaèítko 'Nový' - Role: superadmin - IP: 192.168.68.57 - PC uživatel: Standa

@@ -14,10 +14,11 @@ import time
 import getpass
 
 # ----- Verze programu
-__version__="1.1.0"
+__version__="1.2.0"
 
-# -----1.0.0 Základní funkčnost programu Náhled, Editace, Role, Přístupy, Logy, Základní nastavení, Vytvoření databáze, Uložení základního nastavení, Import dat z Ecxelu
-# ----- 1.1.0 Doplnění o funkci Zamknutí Plánu a Odeknutí plánu s ukádáním do Globálního nastavení
+# -----1.0.0 Základní funkčnost programu: Náhled, Editace, Role, Přístupy, Logy, Základní nastavení, Vytvoření databáze, Uložení základního nastavení, Import dat z Ecxelu
+# ----- 1.1.0 Doplnění o funkci: Zamknutí Plánu a Odeknutí plánu s ukádáním do Globálního nastavení Pro Admina a Superadmina
+# ------ 1.2.0 Přidána fuknce zavření okna po odhlášení uživatele
 
 # Přidejte funkci show_verze() na globální úroveň
 def show_verze():
@@ -459,7 +460,7 @@ def lock_plan():
     mesic_display = combo_mesic_smena.get().strip()
     smena_val = combo_smena_smena.get().strip()
     if not (rok and mesic_display and smena_val):
-        messagebox.showwarning("Upozornění", "Vyberte prosím rok, měsíc a směnu pro zamknutí.")
+        messagebox.showwarning("Upozornění", "Vyberte Rok, měsíc a Směnu pro zamknutí.")
         return
     mesic_map = {"Leden": "leden", "Únor": "unor", "Březen": "brezen", "Duben": "duben", "Květen": "kveten",
                  "Červen": "cerven", "Červenec": "cervenec", "Srpen": "srpen", "Září": "zari",
@@ -479,7 +480,7 @@ def unlock_plan():
     mesic_display = combo_mesic_smena.get().strip()
     smena_val = combo_smena_smena.get().strip()
     if not (rok and mesic_display and smena_val):
-        messagebox.showwarning("Upozornění", "Vyberte prosím rok, měsíc a směnu pro odemknutí.")
+        messagebox.showwarning("Upozornění", "Vyberte Rok, Měsíc a Směnu pro odemknutí.")
         return
     mesic_map = {"Leden": "leden", "Únor": "unor", "Březen": "brezen", "Duben": "duben", "Květen": "kveten",
                  "Červen": "cerven", "Červenec": "cervenec", "Srpen": "srpen", "Září": "zari",
@@ -692,8 +693,14 @@ def create_setting_section(parent, uvazek):
     section_frame = tk.LabelFrame(parent, text=f"Úvazek {uvazek}", font=("TkDefaultFont", 10, "bold"), width=180, height=220)
     section_frame.pack(side=tk.LEFT, padx=10, pady=5)
     section_frame.pack_propagate(False)
+
     listbox = tk.Listbox(section_frame, height=4)
     listbox.pack(fill=tk.X, padx=5, pady=5)
+
+        # Globální binding: bez kontroly polohy, scrollujeme listbox vždy
+    section_frame.winfo_toplevel().bind_all("<MouseWheel>",
+        lambda event: listbox.yview_scroll(-1 * (event.delta // 120), "units"))
+     
     default_item = [" ", "0", "neutrální"]
     if default_item not in global_settings.get(uvazek, []):
         global_settings[uvazek].insert(0, default_item)
@@ -835,6 +842,8 @@ def logout():
     apply_access_control()
     update_employee_list()
     messagebox.showinfo("Odhlášení", "Byl jste úspěšně odhlášen.")
+    # Zavření hlavního okna aplikace
+    root.destroy()
 
 # ----- Funkce pro nastavení přístupových práv podle role uživatele
 def apply_access_control():
@@ -1354,7 +1363,7 @@ def on_edit():
                     cursor = conn.cursor()
                     update_query = """
                         UPDATE plans
-                        SET osobni_cislo = ?, stara_dovolena = ?, dovolena = ?, jmeno_prijmen = ?, smena = ?, uvazek = ?, roky = ?, poradi = ?
+                        SET osobni_cislo = ?, stara_dovolena = ?, dovolena = ?, jmeno_prijmeni = ?, smena = ?, uvazek = ?, roky = ?, poradi = ?
                         WHERE id = ?
                     """
                     params = [
@@ -1418,7 +1427,7 @@ def show_employee_plan():
         year_combobox.set(str(current_year))
         selected_year = str(current_year)
         if not selected_employee or not selected_year:
-            messagebox.showwarning("Upozornění", "Vyberte zaměstnance i rok.")
+            messagebox.showwarning("Upozornění", "Vyberte min. Zaměstnance a Rok.")
             return
         with sqlite3.connect("service_plans.db") as conn:
             conn.row_factory = sqlite3.Row
@@ -1426,7 +1435,7 @@ def show_employee_plan():
             cursor.execute("SELECT * FROM plans WHERE jmeno_prijmeni = ? AND roky = ?", (selected_employee, selected_year))
             record = cursor.fetchone()
         if record is None:
-            messagebox.showinfo("Informace", "Pro vybraného zaměstnance a rok nebyl nalezen žádný plán.")
+            messagebox.showinfo("Informace", "Pro vybraného Zaměstnance a Rok nebyl nalezen žádný plán.")
             return
 
         jmeno = record["jmeno_prijmeni"]
@@ -1758,7 +1767,7 @@ def zobraz_plan_smeny():
     mesic = combo_mesic_smena.get().strip()
     smena = combo_smena_smena.get().strip()
     if not rok or not mesic or not smena:
-        messagebox.showwarning("Upozornění", "Vyberte prosím rok, měsíc a směnu.")
+        messagebox.showwarning("Upozornění", "Vyberte Rok, Měsíc a Směnu.")
         return
     try:
         rok_int = int(rok)
@@ -1850,7 +1859,7 @@ login_button = tk.Button(login_frame, text="Přihlásit se", command=login)
 login_button.pack(side=tk.LEFT, padx=5)
 logout_button = tk.Button(login_frame, text="Odhlásit se", command=logout)
 logout_button.pack(side=tk.LEFT, padx=5)
-login_status_label = tk.Label(login_frame, text="Nejste přihlášeni: status (uživatel)")
+login_status_label = tk.Label(login_frame, text="Nejste přihlášeni: Máte status (uživatel)")
 login_status_label.pack(side=tk.LEFT, padx=10)
 
 # ----- Hlavní záložkový widget
@@ -1918,11 +1927,13 @@ filter_rok.pack(side=tk.LEFT, padx=5)
 tk.Label(filter_frame, text="Směna:").pack(side=tk.LEFT, padx=5)
 filter_smena = ttk.Combobox(filter_frame, state="readonly", width=15)
 filter_smena.pack(side=tk.LEFT, padx=5)
+
 def apply_filters():
     selected_jmeno = filter_jmeno.get()
     selected_rok = filter_rok.get()
     selected_smena = filter_smena.get()
     refresh_treeview_filtered(jmeno_filter=selected_jmeno, rok_filter=selected_rok, smena_filter=selected_smena)
+
 tk.Button(filter_frame, text="Filtrovat", command=apply_filters).pack(side=tk.LEFT, padx=5)
 tk.Button(filter_frame, text="Zobrazit vše", command=refresh_treeview).pack(side=tk.LEFT, padx=5)
 
@@ -1938,6 +1949,9 @@ tree.column("smena", width=90)
 tree.column("uvazek", width=100)
 tree.column("roky", width=60)
 tree.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
+
+# Přidáme binding pro posouvání treeview kolečkem myši
+tree.bind("<MouseWheel>", lambda event: tree.yview_scroll(-1 * (event.delta // 120), "units"))
 
 button_frame = ttk.Frame(tab_nastaveni)
 button_frame.pack(pady=10)

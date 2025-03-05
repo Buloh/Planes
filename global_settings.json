@@ -113,10 +113,18 @@
                     "vypustena": 2,
                     "ranni": 0
                 }
+            },
+            "Směna 2": {
+                "pololeti1": {
+                    "vypustena": 2,
+                    "ranni": 0
+                },
+                "pololeti2": {
+                    "vypustena": 2,
+                    "ranni": 0
+                }
             }
         }
     },
-    "locked_plans": {
-        "2025_Směna 1_brezen": true
-    }
+    "locked_plans": {}
 }
