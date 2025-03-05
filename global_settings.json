@@ -1,0 +1,119 @@
+{
+    "40": [
+        [
+            " ",
+            "0",
+            "neutrální"
+        ],
+        [
+            "Rnn",
+            "8",
+            "neutrální"
+        ],
+        [
+            "Rvr",
+            "8",
+            "neutrální"
+        ],
+        [
+            "RvK",
+            "8",
+            "neutrální"
+        ],
+        [
+            "rr",
+            "8",
+            "neutrální"
+        ],
+        [
+            "Dov",
+            "8",
+            "žluté"
+        ],
+        [
+            "ŠkM",
+            "8",
+            "růžové"
+        ]
+    ],
+    "37.5": [
+        [
+            " ",
+            "0",
+            "neutrální"
+        ],
+        [
+            "Dov",
+            "11",
+            "žluté"
+        ],
+        [
+            "D",
+            "11",
+            "neutrální"
+        ],
+        [
+            "N",
+            "11",
+            "neutrální"
+        ],
+        [
+            "-",
+            "0",
+            "hnědé"
+        ],
+        [
+            "ŠkM",
+            "8",
+            "růžové"
+        ],
+        [
+            "DŠ",
+            "11",
+            "zelené"
+        ],
+        [
+            "r",
+            "7",
+            "tyrkysové"
+        ]
+    ],
+    "37.75": [
+        [
+            " ",
+            "0",
+            "neutrální"
+        ]
+    ],
+    "access": [
+        [
+            "Holub",
+            "MjI1NTIyNTU=",
+            "superadmin"
+        ],
+        [
+            "Velitel směny 1",
+            "MjI1NTIyNTU=",
+            "velitel"
+        ],
+        [
+            "Velitel směny 2",
+            "MjI1NTIyNTU=",
+            "velitel"
+        ]
+    ],
+    "year_settings": {
+        "2025": {
+            "Směna 1": {
+                "pololeti1": {
+                    "vypustena": 3,
+                    "ranni": 0
+                },
+                "pololeti2": {
+                    "vypustena": 2,
+                    "ranni": 0
+                }
+            }
+        }
+    }
+}

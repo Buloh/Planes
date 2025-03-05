@@ -1,0 +1,218 @@
+03.03.2025 22:17:50 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:27:11 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 22:28:24 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:28:33 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+03.03.2025 22:28:41 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+03.03.2025 22:29:59 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:31:22 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 22:33:46 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:34:41 - Pøihlášení jako uživatel (výchozí) - IP: 192.168.68.57
+03.03.2025 22:37:26 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:37:52 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 22:38:13 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:38:28 - Pøihlášení jako uživatel (výchozí) - IP: 192.168.68.57
+03.03.2025 22:38:51 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:39:11 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+03.03.2025 22:41:23 - Stisknuto tlaèítko 'Smazat' - IP: 192.168.68.57
+03.03.2025 22:41:25 - Záznam s ID 4 byl smazán z databáze - IP: 192.168.68.57
+03.03.2025 22:42:03 - Stisknuto tlaèítko 'Nový' - IP: 192.168.68.57
+03.03.2025 22:42:08 - Data byla úspìšnì uložena do databáze - IP: 192.168.68.57
+03.03.2025 22:42:12 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+03.03.2025 22:42:42 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+03.03.2025 22:45:42 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 22:47:46 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+03.03.2025 22:48:37 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 22:55:14 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:01:44 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:11:20 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:14:34 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:16:20 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:17:10 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:26:22 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 23:27:01 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+03.03.2025 23:28:25 - Chyba pøi renderování plánu pro Bøezen: unknown color name "zelené"
+03.03.2025 23:28:34 - Chyba pøi renderování plánu pro Kvìten: unknown color name "zelené"
+03.03.2025 23:28:36 - Chyba pøi renderování plánu pro Èerven: unknown color name "hnìdé"
+03.03.2025 23:28:37 - Chyba pøi renderování plánu pro Srpen: unknown color name "žluté"
+03.03.2025 23:28:38 - Chyba pøi renderování plánu pro Záøí: unknown color name "žluté"
+03.03.2025 23:28:39 - Chyba pøi renderování plánu pro Øíjen: unknown color name "hnìdé"
+03.03.2025 23:28:40 - Chyba pøi renderování plánu pro Prosinec: unknown color name "žluté"
+03.03.2025 23:37:04 - Chyba pøi renderování plánu pro Bøezen: unknown color name "zelené"
+03.03.2025 23:37:10 - Chyba pøi renderování plánu pro Kvìten: unknown color name "zelené"
+03.03.2025 23:37:12 - Chyba pøi renderování plánu pro Èerven: unknown color name "hnìdé"
+03.03.2025 23:37:15 - Chyba pøi renderování plánu pro Srpen: unknown color name "žluté"
+03.03.2025 23:37:19 - Chyba pøi renderování plánu pro Záøí: unknown color name "žluté"
+03.03.2025 23:37:22 - Chyba pøi renderování plánu pro Øíjen: unknown color name "hnìdé"
+03.03.2025 23:37:24 - Chyba pøi renderování plánu pro Prosinec: unknown color name "žluté"
+03.03.2025 23:40:03 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:42:02 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:44:22 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+03.03.2025 23:56:13 - Všechny plány pro rok 2026 byly smazány - IP: 192.168.68.57
+04.03.2025 00:01:07 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 00:01:23 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 00:07:01 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 00:16:24 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 00:22:22 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 06:50:48 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 06:51:30 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 07:28:19 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 07:40:48 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 07:41:08 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 07:43:31 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 07:43:43 - Pøihlášení jako Velitel smìny 2 (velitel) - IP: 192.168.68.57
+04.03.2025 07:47:49 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 07:51:19 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 07:51:40 - Pøihlášení jako Velitel smìny 2 (velitel) - IP: 192.168.68.57
+04.03.2025 07:52:14 - Pøihlášení jako Velitel smìny 3 (velitel) - IP: 192.168.68.57
+04.03.2025 07:52:28 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 07:58:29 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 08:00:18 - Pøihlášení jako Velitel smìny 2 (velitel) - IP: 192.168.68.57
+04.03.2025 08:00:35 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 08:07:40 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 08:43:43 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 08:45:18 - Pøihlášení jako Velitel smìny 4 (uživatel) - IP: 192.168.68.57
+04.03.2025 08:45:35 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 08:46:18 - Pøihlášení jako Velitel smìny 2 (velitel) - IP: 192.168.68.57
+04.03.2025 08:47:23 - Pøihlášení jako Velitel smìny 3 (velitel) - IP: 192.168.68.57
+04.03.2025 08:47:52 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 08:48:48 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 08:49:16 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+04.03.2025 08:49:21 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 08:49:50 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+04.03.2025 08:50:02 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 08:54:57 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 08:55:02 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 08:57:08 - Pøihlášení jako uživatel (výchozí) - IP: 192.168.68.57
+04.03.2025 09:10:13 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 09:10:22 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 09:10:47 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 09:11:24 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 09:11:32 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 09:11:59 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 09:12:04 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 09:17:20 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 12:21:06 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 12:21:11 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 12:39:09 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 12:39:09 - Chyba pøi pøihlašování: name 'shift_filter_combobox' is not defined
+04.03.2025 12:39:18 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 12:39:18 - Chyba pøi pøihlašování: name 'shift_filter_combobox' is not defined
+04.03.2025 13:33:31 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 14:07:03 - Pøihlášení jako Holub (superadmin) - IP: 192.168.68.57
+04.03.2025 14:07:41 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 14:08:31 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 14:08:37 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 14:08:41 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+04.03.2025 14:08:47 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 14:10:39 - Stisknuto tlaèítko 'Edit' - IP: 192.168.68.57
+04.03.2025 14:10:44 - Plán byl upraven uživatelem Holub - IP: 192.168.68.57
+04.03.2025 14:29:54 - Pøihlášení jako uživatel (výchozí) - IP: 192.168.68.57
+04.03.2025 14:58:09 - Pøihlášení jako Velitel smìny 1 (velitel) - IP: 192.168.68.57
+04.03.2025 15:03:01 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 15:04:35 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:05:37 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 15:05:47 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:21:18 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 15:21:31 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:24:58 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:39:48 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 15:40:32 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 15:46:33 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:46:39 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 15:58:21 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:01:10 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:02:54 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:09:52 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:09:59 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:35 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:39 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:43 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:48 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:53 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:15:57 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:16:25 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:18:25 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:22:20 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:22:29 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:26:20 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:27:46 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:27:52 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:27:55 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:27:59 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:28:02 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:28:05 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:28:08 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:29:26 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:47:55 - Záloha databáze byla úspìšnì vytvoøena - Role: uživatel - IP: 192.168.68.57
+04.03.2025 16:48:18 - Pøihlášení jako superadmin (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 16:50:44 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 17:38:31 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:27:27 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:27:32 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:28:02 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:38:37 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:39:17 - Plán byl upraven uživatelem Holub - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:39:32 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:39:50 - Stisknuto tlaèítko 'Edit' - Role: superadmin - IP: 192.168.68.57
+04.03.2025 19:54:13 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 20:01:52 - Chyba pøi zobrazení plánu zamìstnance: unsupported operand type(s) for -: 'str' and 'int'
+04.03.2025 20:42:58 - Chyba pøi zobrazení plánu zamìstnance: name 'uvazek' is not defined
+04.03.2025 21:12:25 - Pøihlášení jako uživatel (výchozí) - Role: uživatel - IP: 192.168.68.57
+04.03.2025 21:20:48 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 21:28:43 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 21:40:30 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 21:52:19 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:01:21 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:03:34 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:04:14 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:04:55 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:05:47 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:06:28 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:09:28 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:11:39 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:13:15 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:16:04 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:16:52 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:18:04 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:19:32 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:20:38 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:21:50 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:45:28 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:49:53 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 22:58:09 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 23:24:18 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+04.03.2025 23:41:58 - Chyba pøi zobrazení plánu zamìstnance: name 'planned_vacation_hours' is not defined
+05.03.2025 00:22:33 - Pøihlášení jako Velitel smìny 2 (velitel) - Role: velitel - IP: 192.168.68.57
+05.03.2025 00:28:53 - Pøihlášení jako Velitel smìny 2 (velitel) - Role: velitel - IP: 192.168.68.57
+05.03.2025 00:37:17 - Pøihlášení jako Velitel smìny 2 (velitel) - Role: velitel - IP: 192.168.68.57
+05.03.2025 00:37:33 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:07:44 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:11:43 - Editace plánu pro Holub: zmìna hodnoty z 'Dov' na 'D'
+05.03.2025 07:24:48 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:25:01 - Editace plánu pro Dedek Vladimír : zmìna hodnoty z 'D' na 'Dov'
+05.03.2025 07:32:10 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:34:30 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:44:23 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:44:28 - Chyba v oknì globálního nastavení: can't pack .!toplevel.!frame.!labelframe3.!listbox inside .!toplevel.!frame2
+05.03.2025 07:53:10 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 07:53:15 - Chyba v oknì globálního nastavení: can't pack .!toplevel.!frame.!labelframe3.!listbox inside .!toplevel.!frame2
+05.03.2025 08:04:41 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:09:02 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:17:04 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:23:05 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:25:59 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:26:54 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:28:32 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:29:48 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:36:27 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:39:15 - Stisknuto tlaèítko 'Smazat' - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:42:33 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 09:43:58 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:36:50 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:49:34 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:51:43 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:51:57 - Uživatel Holub (superadmin) upravil plán (úvazek 37.5): den 16, zmìna z '-' na 'D' - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:54:44 - Pøihlášení jako Holub (superadmin) - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:54:59 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 16, zmìna z 'D' na 'Dov' - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:56:04 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 16, zmìna z 'Dov' na 'D' - Role: superadmin - IP: 192.168.68.57
+05.03.2025 10:56:21 - Uživatel Holub (superadmin) upravil plán zamìstnance Dedek Vladimír (úvazek 37.5): den 21, zmìna z 'Dov' na 'N' - Role: superadmin - IP: 192.168.68.57
